@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="./login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
+
 <body>
     <div class="container">
         <div class="form-login">
-            <h1 class="title">ĐĂNG NHẬP NHẬP</h1>
+            <h1 class="title">ĐĂNG NHẬP</h1>
 
             <div class="input-container">
                 <h3 class="title-input">Email:</h3>
@@ -40,7 +42,7 @@
     <script>
         var buttonLogin = document.getElementById('button-login');
         var textError = document.getElementById('text-error');
-        buttonLogin.addEventListener('click', function (e) { 
+        buttonLogin.addEventListener('click', function (e) {
             var email = document.getElementById('email').value; // Get the name in input
             var password = document.getElementById('password').value; // Get the password in input
 
@@ -53,14 +55,15 @@
                 console.log('email đã điền là: ', email);
                 console.log('password đã điền là: ', password);
                 if (email == "tuantu20081@gmail.com" && password == "123456789") {
-                    
+
                     window.location.href = './home.html'
-                 
+
                 } else {
-                        textError.innerText = 'Nhập sai email hoặc mật khẩu vui lòng kiểm tra lại!'
-                    }
+                    textError.innerText = 'Nhập sai email hoặc mật khẩu vui lòng kiểm tra lại!'
+                }
             }
         })
     </script>
 </body>
+
 </html>
