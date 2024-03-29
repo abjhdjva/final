@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-login">
+            <h1 class="title">ĐĂNG NHẬP</h1>
+
+            <div class="input-container">
+                <h3 class="title-input">Email:</h3>
+                <input class="input" id="email">
+            </div>
+
+            <div class="input-container">
+                <h3 class="title-input">Password:</h3>
+                <input type="password" class="input" id="password">
+            </div>
+
+            <div class="text-error-container">
+                <span id="text-error" class="text-error"></span>
+            </div>
+
+            <div id="button-login" class="button">
+                <h3 class="text-button">Đăng nhập</h3>
+            </div>
+
+            <div class="text-dont-have-account">
+                <span>Bạn chưa có tài khoản ?</span>
+                <a href="./register.html">Đăng kí</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var buttonLogin = document.getElementById('button-login');
+        var textError = document.getElementById('text-error');
+        buttonLogin.addEventListener('click', function (e) { 
+            var email = document.getElementById('email').value; // Get the name in input
+            var password = document.getElementById('password').value; // Get the password in input
+
+            if (email == "") {
+                textError.innerText = 'Vui lòng điền email';
+            } else if (password == "") {
+                textError.innerText = 'Vui lòng nhập password!';
+            } else {
+                // Handle logic
+                console.log('email đã điền là: ', email);
+                console.log('password đã điền là: ', password);
+                if (email == "tuantu20081@gmail.com" && password == "123456789") {
+                    
+                    window.location.href = './home.html'
+                 
+                } else {
+                        textError.innerText = 'Nhập sai email hoặc mật khẩu vui lòng kiểm tra lại!'
+                    }
+            }
+        })
+    </script>
+</body>
+</html>
